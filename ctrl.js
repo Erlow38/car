@@ -13,6 +13,12 @@ let deplacement_vertical = 20;
 let deplacement_horizontal = 40;
 let temps = 1;
 
+const beforeStyle = window.getComputedStyle(infinite, ':before');
+const animationDuration = beforeStyle.getPropertyValue('animation');
+infinite.style.setProperty('--infinite-duration', '1s');
+wheel_1.style.setProperty('--wheel-duration-1', '1s');
+wheel_2.style.setProperty('--wheel-duration-2', '1s');
+
 car.style.top = deplacement_vertical + 'px';
 car.style.left = deplacement_horizontal + 'px';
 
@@ -37,6 +43,20 @@ document.addEventListener("keydown", function(event) {
             deplacement_vertical += 20;
             car.style.top = deplacement_vertical + 'px';
         }
+    } else if (event.key === "+") {
+        if (temps > 0.4) {
+            temps = temps - 0.2;
+        }
+        infinite.style.setProperty('--infinite-duration', temps + 's');
+        wheel_1.style.setProperty('--wheel-duration-1', temps + 's');
+        wheel_2.style.setProperty('--wheel-duration-2', temps + 's');
+    } else if (event.key === "-") {
+        if (temps < 2) {
+            temps = temps + 0.2;
+        }
+        infinite.style.setProperty('--infinite-duration', temps + 's');
+        wheel_1.style.setProperty('--wheel-duration-1', temps + 's');
+        wheel_2.style.setProperty('--wheel-duration-2', temps + 's');
     }
   });
 
@@ -69,11 +89,6 @@ down_btn.addEventListener('click', function() {
 });
 
 
-const beforeStyle = window.getComputedStyle(infinite, ':before');
-const animationDuration = beforeStyle.getPropertyValue('animation');
-infinite.style.setProperty('--infinite-duration', '1s');
-wheel_1.style.setProperty('--wheel-duration-1', '1s');
-wheel_2.style.setProperty('--wheel-duration-2', '1s');
 
 more_btn.addEventListener('click', function() {
     if (temps > 0.4) {
