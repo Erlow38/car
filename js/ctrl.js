@@ -9,27 +9,31 @@ const infinite = document.querySelector('.infinite');
 const wheel_1 = document.querySelector('.wheel-1');
 const wheel_2 = document.querySelector('.wheel-2');
 const car = document.querySelector('.car');
-let deplacement = 20;
+let deplacement_vertical = 20;
+let deplacement_horizontal = 40;
 let temps = 1;
 
+car.style.top = deplacement_vertical + 'px';
+car.style.left = deplacement_horizontal + 'px';
+
 right_btn.addEventListener('click', function() {
-    deplacement += 40;
-    car.style.left = deplacement + 'px';
+    deplacement_horizontal += 40;
+    car.style.left = deplacement_horizontal + 'px';
 });
 
 left_btn.addEventListener('click', function() {
-    deplacement -= 40;
-    car.style.left = deplacement + 'px';
+    deplacement_horizontal -= 40;
+    car.style.left = deplacement_horizontal + 'px';
 });
 
 up_btn.addEventListener('click', function() {
-    deplacement -= 20;
-    car.style.top = deplacement + 'px';
+    deplacement_vertical -= 20;
+    car.style.top = deplacement_vertical + 'px';
 });
 
 down_btn.addEventListener('click', function() {
-    deplacement += 20;
-    car.style.top = deplacement + 'px';
+    deplacement_vertical += 20;
+    car.style.top = deplacement_vertical + 'px';
 });
 
 
