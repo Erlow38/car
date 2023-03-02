@@ -18,38 +18,54 @@ car.style.left = deplacement_horizontal + 'px';
 
 document.addEventListener("keydown", function(event) {
     if (event.key === "ArrowRight") {
-        deplacement_horizontal += 40;
-        car.style.left = deplacement_horizontal + 'px';
+        if (deplacement_horizontal < 360) {
+            deplacement_horizontal += 40;
+            car.style.left = deplacement_horizontal + 'px';
+        }
     } else if (event.key === "ArrowLeft") {
-        deplacement_horizontal -= 40;
-        car.style.left = deplacement_horizontal + 'px';
+        if (deplacement_horizontal > -360) {
+            deplacement_horizontal -= 40;
+            car.style.left = deplacement_horizontal + 'px';
+        }
     } else if (event.key === "ArrowUp") {
-        deplacement_vertical -= 20;
-        car.style.top = deplacement_vertical + 'px';
+        if (deplacement_vertical > -40) {
+            deplacement_vertical -= 20;
+            car.style.top = deplacement_vertical + 'px';
+        }
     } else if (event.key === "ArrowDown") {
-        deplacement_vertical += 20;
-        car.style.top = deplacement_vertical + 'px';
+        if (deplacement_vertical < 80) {
+            deplacement_vertical += 20;
+            car.style.top = deplacement_vertical + 'px';
+        }
     }
   });
 
 right_btn.addEventListener('click', function() {
-    deplacement_horizontal += 40;
-    car.style.left = deplacement_horizontal + 'px';
+    if (deplacement_horizontal < 360) {
+        deplacement_horizontal += 40;
+        car.style.left = deplacement_horizontal + 'px';
+    }
 });
 
 left_btn.addEventListener('click', function() {
-    deplacement_horizontal -= 40;
-    car.style.left = deplacement_horizontal + 'px';
+    if (deplacement_horizontal > -360) {
+        deplacement_horizontal -= 40;
+        car.style.left = deplacement_horizontal + 'px';
+    }
 });
 
 up_btn.addEventListener('click', function() {
-    deplacement_vertical -= 20;
-    car.style.top = deplacement_vertical + 'px';
+    if (deplacement_vertical > -40) {
+        deplacement_vertical -= 20;
+        car.style.top = deplacement_vertical + 'px';
+    }
 });
 
 down_btn.addEventListener('click', function() {
-    deplacement_vertical += 20;
-    car.style.top = deplacement_vertical + 'px';
+    if (deplacement_vertical < 80) {
+        deplacement_vertical += 20;
+        car.style.top = deplacement_vertical + 'px';
+    }
 });
 
 
