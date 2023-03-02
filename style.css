@@ -76,13 +76,6 @@
     z-index: 10;
     animation: float 2s ease-in-out infinite;
 }
-.car-body {
-    height: 130px;
-    position: absolute;
-    left: 38vw;
-    bottom: 45.5vh;
-    z-index: 30;
-}
 @keyframes float {
 	0% {
 		transform: translatey(0px);
@@ -94,21 +87,28 @@
 		transform: translatey(0px);
 	}
 }
+.car-body {
+    height: 130px;
+    position: absolute;
+    left: 38vw;
+    bottom: 45.5vh;
+    z-index: 30;
+}
 .wheel-1 {
     height: 70px;
     position: absolute;
-    left: 780.5px;
-    top: 450px;
-    z-index: 30;
+    left: 40.75vw;
+    top: 47vh;
+    z-index: 25;
     animation: rotate linear infinite;
     animation-duration: var(--wheel-duration-1);
 }
 .wheel-2 {
     position: absolute;
     height: 70px;
-    left: 1060px;
-    top: 450px;
-    z-index: 30;
+    left: 55.25vw;
+    top: 47vh;
+    z-index: 25;
     animation: rotate linear infinite;
     animation-duration: var(--wheel-duration-2);
 }
