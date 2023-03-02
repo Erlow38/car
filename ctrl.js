@@ -57,6 +57,17 @@ document.addEventListener("keydown", function(event) {
         infinite.style.setProperty('--infinite-duration', temps + 's');
         wheel_1.style.setProperty('--wheel-duration-1', temps + 's');
         wheel_2.style.setProperty('--wheel-duration-2', temps + 's');
+    } else if (event.code === "Space") {
+        if (infinite.style.getPropertyValue('--infinite-duration') == '0s') {
+            infinite.style.setProperty('--infinite-duration', '1s');
+            wheel_1.style.setProperty('--wheel-duration-1', '1s');
+            wheel_2.style.setProperty('--wheel-duration-2', '1s');
+            temps = 1;
+        } else {
+            infinite.style.setProperty('--infinite-duration', '0s');
+            wheel_1.style.setProperty('--wheel-duration-1', '0s');
+            wheel_2.style.setProperty('--wheel-duration-2', '0s');
+        }
     }
   });
 
