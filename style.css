@@ -98,7 +98,7 @@
     height: 70px;
     position: absolute;
     left: 40.75vw;
-    top: 47vh;
+    top: 48vh;
     z-index: 25;
     animation: rotate linear infinite;
     animation-duration: var(--wheel-duration-1);
@@ -107,7 +107,7 @@
     position: absolute;
     height: 70px;
     left: 55.25vw;
-    top: 47vh;
+    top: 48vh;
     z-index: 25;
     animation: rotate linear infinite;
     animation-duration: var(--wheel-duration-2);
