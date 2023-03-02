@@ -16,6 +16,22 @@ let temps = 1;
 car.style.top = deplacement_vertical + 'px';
 car.style.left = deplacement_horizontal + 'px';
 
+document.addEventListener("keydown", function(event) {
+    if (event.key === "ArrowRight") {
+        deplacement_horizontal += 40;
+        car.style.left = deplacement_horizontal + 'px';
+    } else if (event.key === "ArrowLeft") {
+        deplacement_horizontal -= 40;
+        car.style.left = deplacement_horizontal + 'px';
+    } else if (event.key === "ArrowUp") {
+        deplacement_vertical -= 20;
+        car.style.top = deplacement_vertical + 'px';
+    } else if (event.key === "ArrowDown") {
+        deplacement_vertical += 20;
+        car.style.top = deplacement_vertical + 'px';
+    }
+  });
+
 right_btn.addEventListener('click', function() {
     deplacement_horizontal += 40;
     car.style.left = deplacement_horizontal + 'px';
