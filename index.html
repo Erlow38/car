@@ -9,10 +9,11 @@
 <body>
     <div class="title"><img src="https://fontmeme.com/permalink/230301/4672a629eb0e7d7221cc4d77b4283d58.png" alt="police-richards-frederick" border="0"></div>
     <div class="car">
-        <img class="car-body" src="img/car.webp" alt="">
-        <img class="wheel-1" src="img/wheel.webp" alt="">
-        <img class="wheel-2" src="img/wheel.webp" alt="">
+        <div class="car-container"></div>
+        <img class="wheel-1" src="img/wheel.png" alt="">
+        <img class="wheel-2" src="img/wheel.png" alt="">
     </div>
+    <div class="object"></div>
     <div class="container">
         <div class="infinite">
             <div class="shadow"></div>
@@ -26,6 +27,29 @@
         <button class="btn" id="more_btn">+</button>
         <button class="btn" id="less_btn">-</button>
         <button class="btn" id="stop_btn">⏸</button>
+        <button class="btn" id="object_btn"><img src="img/caisse.png" alt=""></button>
+        <select class="select select-car" name="cars" id="cars">
+            <option value="blanc">-- couleur voiture --</option>
+            <option value="blanc">blanc</option>
+            <option value="bleu">bleu</option>
+            <option value="bleu_ciel">bleu-ciel</option>
+            <option value="rouge">rouge</option>
+            <option value="vert">vert</option>
+            <option value="orange">orange</option>
+            <option value="violet">violet</option>
+            <option value="noir">noir</option>
+        </select>
+        <select class="select select-bg" name="cars" id="cars">
+            <option value="noir">-- couleur fond --</option>
+            <option value="blanc">blanc</option>
+            <option value="bleu">bleu</option>
+            <option value="bleu_ciel">bleu-ciel</option>
+            <option value="rouge">rouge</option>
+            <option value="vert">vert</option>
+            <option value="orange">orange</option>
+            <option value="violet">violet</option>
+            <option value="noir">noir</option>
+        </select>
     </div>
     <div class="credit">Ehrler Ethan Copyright © 2023 All rights reserved.</div>
     <script src="ctrl.js"></script>

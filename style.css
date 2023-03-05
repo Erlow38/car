@@ -97,7 +97,7 @@
 .wheel-1 {
     height: 70px;
     position: absolute;
-    left: 40.75vw;
+    left: 42vw;
     top: 48vh;
     z-index: 25;
     animation: rotate linear infinite;
@@ -106,7 +106,7 @@
 .wheel-2 {
     position: absolute;
     height: 70px;
-    left: 55.25vw;
+    left: 56vw;
     top: 48vh;
     z-index: 25;
     animation: rotate linear infinite;
@@ -116,6 +116,28 @@
     100% {
         transform: rotate(360deg);
     }
+}
+.object {
+    position: absolute;
+    width: 1500px;
+    height: 230px;
+    transform-origin: center;
+    top: 43.5%;
+    left: 11%;
+}
+.caisse1 {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    width: 150px;
+    z-index: 1;
+}
+.caisse2 {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 150px;
+    z-index: 20;
 }
 .btn_container {
     position: absolute;
@@ -138,6 +160,15 @@
     align-items: center;
     cursor: pointer;
     font-size: 20px;
+    margin-left: 5px;
+}
+.select {
+    padding: 5px;
+    margin-left: 10px;
+    width: 150px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: white;
 }
 .credit {
     font-family: 'Poppins', sans-serif;
